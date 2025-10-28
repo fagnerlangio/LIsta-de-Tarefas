@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Minha Lista de Tarefas</h1>
+
+    <input type="text" id="inputTarefa" placeholder="Digite uma tarefa...">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+
+    <input type="text" id="inputBusca" placeholder="Buscar tarefa..." oninput="filtrarTarefas()">
+
+    <div class="acoes">
+        <button class="btn btn-limpar" onclick="limparTudo()">🧹 Limpar Tudo</button>
+        <button class="btn btn-tema" onclick="alternarTema()">🌙 Mudar Tema</button>
+    </div>
+
+    <p id="contador"></p>
+    <p id="mensagem"></p>
+    <ul id="listaTarefas"></ul>
+    <p id="avisoVazio"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
