@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📝 Minhas Tarefas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📝 Minhas Tarefas Diárias</h1>
+
+    <div class="input-group">
+        <input type="text" id="inputTarefa" placeholder="Digite uma nova tarefa...">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+    </div>
+
+    <input type="text" id="busca" placeholder="🔍 Buscar tarefa..." oninput="filtrarTarefas()">
+
+    <!-- Botões de filtro -->
+    <div class="filtros">
+        <button id="filtroTodas" class="filtro-ativo" onclick="setFiltro('todas')">
+            Todas (<span id="contTodas">0</span>)
+        </button>
+        <button id="filtroPendentes" class="filtro-btn" onclick="setFiltro('pendentes')">
+            Pendentes (<span id="contPendentes">0</span>)
+        </button>
+        <button id="filtroConcluidas" class="filtro-btn" onclick="setFiltro('concluidas')">
+            Concluídas (<span id="contConcluidas">0</span>)
+        </button>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <ul id="listaTarefas"></ul>
+    <p id="avisoVazio">Nenhuma tarefa adicionada.</p>
+    <p id="contador"></p>
+
+    <div class="botoes-rodape">
+        <button id="limparConcluidasBtn" onclick="limparConcluidas()">🗑 Limpar Concluídas</button>
+        <button id="limparTudoBtn" onclick="limparTodas()">🗑 Limpar Todas</button>
+        <button id="temaBtn" onclick="alternarTema()">🌙 Tema Escuro</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+ * {
+     box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+ }
+
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: var(--bg);
+     color: var(--text);
+     transition: background 0.4s, color 0.4s;
+ }
+
+ :root {
+     --bg: #f5f7fa;
+     --card: #ffffff;
+     --text: #222;
+     --btn: #4CAF50;
+     --btn-hover: #45a049;
+     --btn-concluir: #9c27b0;
+     --btn-concluir-hover: #7b1fa2;
+ }
+
+ body.dark {
+     --bg: #121212;
+     --card: #1e1e1e;
+     --text: #e0e0e0;
+     --btn: #6c63ff;
+     --btn-hover: #5548d9;
+     --btn-concluir: #ab47bc;
+     --btn-concluir-hover: #8e24aa;
+ }
+
+ .container {
+     max-width: 600px;
+     margin: 60px auto;
+     padding: 25px;
+     background: var(--card);
+     border-radius: 15px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+
+ h1 {
+     margin-bottom: 15px;
+ }
+
+ input {
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     outline: none;
+     color: var(--text);
+     background: var(--bg);
+ }
+
+ .input-group {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+
+ #inputTarefa {
+     width: 70%;
+     margin-right: 5px;
+ }
+
+ #busca {
+     width: 90%;
+     margin-top: 15px;
+ }
+
+ button {
+     padding: 10px 15px;
+     border: none;
+     border-radius: 10px;
+     background: var(--btn);
+     color: white;
+     cursor: pointer;
+     transition: background 0.3s, opacity 0.3s;
+ }
+
+ button:hover {
+     background: var(--btn-hover);
+ }
+
+ button:disabled {
+     opacity: 0.5;
+     cursor: not-allowed;
+ }
+
+ button:disabled:hover {
+     background: var(--btn);
+ }
+
+ /* Filtros */
+ .filtros {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     margin-top: 15px;
+     flex-wrap: wrap;
+ }
+
+ .filtro-btn {
+     background: #757575;
+     padding: 8px 15px;
+     font-size: 0.9em;
+ }
+
+ .filtro-btn:hover {
+     background: #616161;
+ }
+
+ .filtro-ativo {
+     background: var(--btn);
+     padding: 8px 15px;
+     font-size: 0.9em;
+     font-weight: 600;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .filtro-ativo:hover {
+     background: var(--btn-hover);
+ }
+
+ ul {
+     list-style: none;
+     padding: 0;
+     margin-top: 20px;
+ }
+
+ li {
+     background: var(--bg);
+     color: var(--text);
+     padding: 12px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: all 0.3s;
+ }
+
+ .tarefa-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+ }
+
+ .tarefa-content {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex: 1;
+ }
+
+ .checkbox-concluida {
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+     accent-color: var(--btn);
+ }
+
+ .tarefa-content span {
+     text-align: left;
+     word-break: break-word;
+ }
+
+ .tarefa-content span.concluida {
+     text-decoration: line-through;
+     opacity: 0.6;
+ }
+
+ .botoes {
+     display: flex;
+     gap: 5px;
+     flex-wrap: wrap;
+ }
+
+ .botoes button {
+     margin-left: 5px;
+     background: #ff5252;
+     font-size: 0.85em;
+     padding: 8px 12px;
+ }
+
+ .botoes .editar {
+     background: #2196F3;
+ }
+
+ .botoes .btn-concluir {
+     background: var(--btn-concluir);
+ }
+
+ .botoes .btn-concluir:hover {
+     background: var(--btn-concluir-hover);
+ }
+
+ .botoes .btn-concluir.concluida-btn {
+     background: #4CAF50;
+ }
+
+ .botoes .btn-concluir.concluida-btn:hover {
+     background: #45a049;
+ }
+
+ .botoes button:hover {
+     opacity: 0.8;
+ }
+
+ .botoes-rodape {
+     margin-top: 10px;
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ #temaBtn,
+ #limparTudoBtn,
+ #limparConcluidasBtn {
+     background: #555;
+     font-size: 0.9em;
+ }
+
+ #temaBtn:hover,
+ #limparTudoBtn:hover,
+ #limparConcluidasBtn:hover:not(:disabled) {
+     background: #333;
+ }
+
+ .fadeOut {
+     opacity: 0;
+     transform: translateX(20px);
+ }
+
+ #mensagem {
+     margin-top: 10px;
+     font-size: 0.9em;
+     color: var(--btn);
+ }
+
+ #avisoVazio {
+     margin-top: 10px;
+     color: gray;
+ }
+
+ #contador {
+     font-size: 0.9em;
+     margin-top: 10px;
+     color: var(--text);
+     font-weight: 500;
+ }
